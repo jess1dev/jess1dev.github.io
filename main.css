@@ -1,0 +1,13 @@
+@font-face {
+    font-family: dseg7;
+    src: url(DSEG7Classic-Bold.ttf);
+  }
+
+.container-full {
+    height: 100vh;
+}
+
+.time {
+    font-family: dseg7;
+    font-size: 50px;
+}
