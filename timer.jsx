@@ -2,7 +2,7 @@ let timeS = "0.00";
 let time = 1.0;
 let prvTimer = 0.0;
 let counting = false;
-let waiting = false;
+let waiting = true;
 
 function tick() {
     timeS = time.toFixed(2);;
@@ -19,24 +19,26 @@ function tick() {
 
   document.addEventListener('keydown', function(event) {
     if(event.key == " ") {
-        if(prvTimer < 1.0)
+        if(counting)
         {
-            waiting = true;
+            counting = false;
+            return;
         }
-        else
+        if(prvTimer > 1.0)
         {
             waiting = false;
         }
+
     }
 });
 
 //
 document.addEventListener('keyup', function(event) {
     if(event.key == " ") {
-        if(waiting)
+        if(!waiting)
         {
             prvTimer = 0;
-            waiting = false;
+            waiting = true;
             counting = true;
         }
     }
