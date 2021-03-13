@@ -19,7 +19,6 @@ function tick() {
 
   document.addEventListener('keydown', function(event) {
     if(event.key == " ") {
-        alert('Space was pressed');
         if(prvTimer < 1.0)
         {
             waiting = true;
@@ -34,7 +33,6 @@ function tick() {
 
 document.addEventListener('keyup', function(event) {
     if(event.key == " ") {
-        alert('Space was released');
         if(waiting)
         {
             prvTimer = 0;
