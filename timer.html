@@ -25,8 +25,8 @@
                     <div class="col-sm">
 
                     </div>
-                    <div class="col-sm h-100 text-center align-items-center">
-                        <span class="time text-light align-middle">0.00</span>
+                    <div class="col-sm h-100 text-center align-items-center" id="root">
+                        <span class="time text-light align-middle"></span>
                     </div>
                     <div class="col-sm">
 
@@ -34,5 +34,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <!-- Load our React component. -->
+        <script src="timer.jsx" type="text/babel"></script>
     </body>
 </html>
