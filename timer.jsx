@@ -30,7 +30,7 @@ function tick() {
     }
 });
 
-
+//
 document.addEventListener('keyup', function(event) {
     if(event.key == " ") {
         if(waiting)
