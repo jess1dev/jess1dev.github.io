@@ -3,11 +3,12 @@ let time = 1.0;
 let prvTimer = 0.0;
 let counting = false;
 let waiting = true;
+let color="text-light";
 
 function tick() {
     timeS = time.toFixed(2);;
 
-    const timer = <span class="time text-light align-middle">{timeS}</span>;
+    const timer = <span class="time {color} align-middle">{timeS}</span>;
     ReactDOM.render(timer, document.getElementById('time'));
     if(counting)
     {
@@ -28,6 +29,14 @@ function tick() {
         {
             waiting = false;
         }
+        if(waiting)
+        {
+            color="text-primary";
+        }
+        else
+        {
+            color="text-secondary";
+        }
 
     }
 });
@@ -41,5 +50,6 @@ document.addEventListener('keyup', function(event) {
             waiting = true;
             counting = true;
         }
+        color="text-light";
     }
 });
