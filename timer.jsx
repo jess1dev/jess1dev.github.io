@@ -1,6 +1,7 @@
 let timeS = "0.00";
 let time = 1.0;
 let prvTimer = 0.0;
+let prvCount = false;
 let counting = false;
 let waiting = true;
 let color="text-light";
@@ -13,6 +14,10 @@ function tick() {
     if(counting)
     {
         time += 0.05;
+    }
+    if(prvCount)
+    {
+        prvTimer += 0.05;
     }
   }
   
@@ -35,6 +40,7 @@ function tick() {
         }
         else
         {
+            prvCount = true;
             color="text-secondary";
         }
 
